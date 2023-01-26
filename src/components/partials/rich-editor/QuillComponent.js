@@ -1,12 +1,12 @@
 import React from "react";
-import { useQuill } from "react-quilljs";
+// import { useQuill } from "react-quilljs";
 
 export const QuillComponent = () => {
   let placeholder = "Hello World!";
-  const { quillRef } = useQuill({ placeholder });
+  // const { quillRef } = useQuill({ placeholder });
   return (
     <div style={{ width: "100%", height: "100%" }}>
-      <div ref={quillRef} />
+      {/* <div ref={quillRef} /> */}
     </div>
   );
 };
@@ -41,10 +41,10 @@ export const QuillComponentMinimal = () => {
     "background",
     "clean",
   ];
-  const { quillRef } = useQuill({ modules, formats, placeholder });
+  // const { quillRef } = useQuill({ modules, formats, placeholder });
   return (
     <div style={{ width: "100%", height: "100%" }}>
-      <div ref={quillRef} />
+      {/* <div ref={quillRef} /> */}
     </div>
   );
 };
