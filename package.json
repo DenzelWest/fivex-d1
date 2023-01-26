@@ -1,6 +1,5 @@
 {
   "name": "DashliteReact-Demo1",
-  "homepage": "https://react.dashlite.net/demo1/",
   "version": "1.5.0",
   "private": true,
   "dependencies": {
