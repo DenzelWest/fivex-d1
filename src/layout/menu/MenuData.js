@@ -7,8 +7,14 @@ const menu = [
   {
     icon: "bitcoin-cash",
     text: "Crypto Dashboard",
-    link: "/crypto",
+    link: "/crypto", 
   },
+  {
+    icon: "sign-mxn-alt",
+    text: "Stake Dashboard",
+    link: "/stake", 
+  },
+
   {
     icon: "growth",
     text: "Analytics Dashboard",

@@ -1,5 +1,8 @@
 /*! Email Template */
 @import "dashlite_variables";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 .email{
     &-wraper{
         background: $lighter;
