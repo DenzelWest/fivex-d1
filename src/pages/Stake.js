@@ -145,9 +145,9 @@ const StakeHomePage = () => {
                     </div>
                     <div className="flex justify-between card-title mt-3">
                     <h6 className="subtitle fw-bold">
-                      Total invested:
+                      Total invested:  
                     </h6>
-                    <h6 className="subtitle fw-bold">
+                    <h6 className="subtitle">
                       0.00 MATIC
                     </h6>
                   </div>
