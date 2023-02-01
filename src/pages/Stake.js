@@ -136,14 +136,21 @@ const StakeHomePage = () => {
                       Withdraw Rewards
                     </h6>
                     <div className="flex justify-between card-title mt-3">
-                      <h6 className="font-semibold subtitle">
+                      <h6 className="subtitle">
                         All Claimable Rewards
                       </h6>
                       <h6 className="subtitle">
-
                         0.00MATIC
                       </h6>
                     </div>
+                    <div className="flex justify-between card-title mt-3">
+                    <h6 className="subtitle fw-bold">
+                      Total invested:
+                    </h6>
+                    <h6 className="subtitle fw-bold">
+                      0.00 MATIC
+                    </h6>
+                  </div>
                   </div>
                   <div className="md:w-3/5 md:ml-20 card-title">
                     <h6 className="fw-bold subtitle">
@@ -176,16 +183,9 @@ const StakeHomePage = () => {
                   </div>
                 </div>
                 <div className="sm:flex justify-between bg-transparent md:mt-1">
-                  <div className="md:flex md:justify-between text-slate-400 bg-transparent w-4/12 card-title">
-                    <h6 className="bg-transparent text-dark-blue font-semibold subtitle">
-                      Total invested:
-                    </h6>
-                    <h6 className="bg-transparent  text-dark-blue subtitle">
-                      0.00 MATIC
-                    </h6>
-                  </div>
+                  
                   <div>
-                    <Button color="primary" className="border border-secondary-subtle p-1 rounded-pill justify-content-center">Contact Support</Button>
+                    <Button color="primary" className="border border-secondary-subtle p-1 rounded-pill ">Contact Support</Button>
                   </div>
                 </div>
               </PreviewAltCard>
