@@ -17,38 +17,52 @@ import {
 import { Form, Spinner, Alert } from "reactstrap";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
-
+import { toast, ToastContainer } from "react-toastify";
+import axios from "axios";
 const Login = () => {
   const [loading, setLoading] = useState(false);
   const [passState, setPassState] = useState(false);
   const [errorVal, setError] = useState("");
 
-  const onFormSubmit = (formData) => {
+  const onFormSubmit = async (formData) => {
     setLoading(true);
-    const loginName = "info@softnio.com";
-    const pass = "123456";
-    if (formData.name === loginName && formData.passcode === pass) {
-      localStorage.setItem("accessToken", "token");
-      setTimeout(() => {
-        window.history.pushState(
-          `${process.env.PUBLIC_URL ? process.env.PUBLIC_URL : "/"}`,
-          "auth-login",
-          `${process.env.PUBLIC_URL ? process.env.PUBLIC_URL : "/"}`
-        );
-        window.location.reload();
-      }, 2000);
-    } else {
-      setTimeout(() => {
-        setError("Cannot login with credentials");
-        setLoading(false);
-      }, 2000);
-    }
+    console.log(formData);
+    await axios
+      .post(`${process.env.REACT_APP_BACKEND}/user/login`, formData)
+      .then((res) => {
+        console.log(res);
+        if (res.status === 200) {
+          toast.success("Log in successful");
+          const token = res.data.token;
+          localStorage.setItem("token", token);
+          localStorage.setItem("user", JSON.stringify(res.data));
+          setLoading(false);
+          setTimeout(() => window.open("/", "_self"), 2000);
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+        if (err.response.status === 400) {
+          toast.error("Account does not exist");
+          setLoading(false);
+          return;
+        }
+        if (err.response.status === 401) {
+          toast.error("Invalid Password");
+          setLoading(false);
+          return;
+        } else {
+          setLoading(false);
+          toast.error("Please try again later");
+        }
+      });
   };
 
   const { errors, register, handleSubmit } = useForm();
 
   return (
     <React.Fragment>
+      <ToastContainer />
       <Head title="Login" />
       <PageContainer>
         <Block className="nk-block-middle nk-auth-body  wide-xs">
@@ -80,17 +94,17 @@ const Login = () => {
               <div className="form-group">
                 <div className="form-label-group">
                   <label className="form-label" htmlFor="default-01">
-                    Email or Username
+                    Email
                   </label>
                 </div>
                 <div className="form-control-wrap">
                   <input
                     type="text"
                     id="default-01"
-                    name="name"
+                    name="email"
                     ref={register({ required: "This field is required" })}
                     defaultValue="info@softnio.com"
-                    placeholder="Enter your email address or username"
+                    placeholder="Enter your email address"
                     className="form-control-lg form-control"
                   />
                   {errors.name && <span className="invalid">{errors.name.message}</span>}
@@ -99,7 +113,7 @@ const Login = () => {
               <div className="form-group">
                 <div className="form-label-group">
                   <label className="form-label" htmlFor="password">
-                    Passcode
+                    Password
                   </label>
                   <Link className="link link-primary link-sm" to={`${process.env.PUBLIC_URL}/auth-reset`}>
                     Forgot Code?
@@ -121,10 +135,10 @@ const Login = () => {
                   <input
                     type={passState ? "text" : "password"}
                     id="password"
-                    name="passcode"
+                    name="password"
                     defaultValue="123456"
                     ref={register({ required: "This field is required" })}
-                    placeholder="Enter your passcode"
+                    placeholder="Enter your password"
                     className={`form-control-lg form-control ${passState ? "is-hidden" : "is-shown"}`}
                   />
                   {errors.passcode && <span className="invalid">{errors.passcode.message}</span>}
