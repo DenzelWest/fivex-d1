@@ -5,6 +5,7 @@ import Logo from "../logo/Logo";
 import News from "../news/News";
 import User from "./dropdown/user/User";
 import Notification from "./dropdown/notification/Notification";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 const Header = ({ fixed, theme, className, setVisibility, ...props }) => {
   const headerClass = classNames({
@@ -28,15 +29,15 @@ const Header = ({ fixed, theme, className, setVisibility, ...props }) => {
           <div className="nk-header-brand d-xl-none">
             <Logo />
           </div>
-          <div className="nk-header-news d-none d-xl-block">
-            <News />
-          </div>
+          <div className="nk-header-news d-none d-xl-block">{/*  <News /> */}</div>
           <div className="nk-header-tools">
             <ul className="nk-quick-nav">
-              <li className="user-dropdown"  onClick={() => setVisibility(false)}>
+              <ConnectButton />
+
+              <li className="user-dropdown" onClick={() => setVisibility(false)}>
                 <User />
               </li>
-              <li className="notification-dropdown me-n1"  onClick={() => setVisibility(false)}>
+              <li className="notification-dropdown me-n1" onClick={() => setVisibility(false)}>
                 <Notification />
               </li>
             </ul>

@@ -5,16 +5,19 @@ import "./assets/scss/style-email.scss";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import RainbowKit from "./utils/RainbowKit";
 
 const Error404Modern = lazy(() => import("./pages/error/404-modern"));
 
 ReactDOM.render(
   <React.Fragment>
-    <Suspense fallback={<div />}>
-      <Router basename={`/`}>
-        <Route render={({ location }) => (location.state && location.state.is404 ? <Error404Modern /> : <App />)} />
-      </Router>
-    </Suspense>
+    <RainbowKit>
+      <Suspense fallback={<div />}>
+        <Router basename={`/`}>
+          <Route render={({ location }) => (location.state && location.state.is404 ? <Error404Modern /> : <App />)} />
+        </Router>
+      </Suspense>
+    </RainbowKit>
   </React.Fragment>,
   document.getElementById("root")
 );
