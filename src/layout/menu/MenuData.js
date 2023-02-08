@@ -14,6 +14,12 @@ const menu = [
     text: "Stake Dashboard",
     link: "/stake", 
   },
+  {
+    icon: "exchange-v",
+    text: "Exchange Dashboard",
+    link: "/exchange", 
+  },
+
 
   {
     icon: "growth",
