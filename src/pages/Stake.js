@@ -151,7 +151,7 @@ const StakeHomePage = () => {
                   </div>
                   <div className="card-title">{parseFloat(stats.balance / 10 ** 18).toFixed(4)} MATIC </div>
                 </div>
-                <div className="card-amount mt-2 border border-secondary-subtle p-1 rounded-pill">
+                <div className="card-amount mt-2 border border-secondary-subtle p-2 rounded-pill">
                   <input
                     type="number"
                     min={0}
@@ -184,7 +184,7 @@ const StakeHomePage = () => {
                 </div>
                 <Button
                   color="primary"
-                  className="w-full border border-secondary-subtle p-1 rounded-pill justify-content-center mt-4"
+                  className="w-full border border-secondary-subtle p-2 rounded-pill justify-content-center mt-4"
                   onClick={stake}
                 >
                   Stake
@@ -193,14 +193,14 @@ const StakeHomePage = () => {
                   color="primary"
                   outline
                   onClick={withdraw}
-                  className="btn-dim btn-white w-full border border-secondary-subtle p-1 rounded-pill justify-content-center mt-1"
+                  className="btn-dim btn-white w-full border border-secondary-subtle p-2 rounded-pill justify-content-center mt-2"
                 >
                   <span>Withdraw Reward</span>
                 </Button>
                 <Button
                   color="primary"
                   outline
-                  className="btn-dim btn-white w-full border border-secondary-subtle p-1 rounded-pill justify-content-center mt-1"
+                  className="btn-dim btn-white w-full border border-secondary-subtle p-2 rounded-pill justify-content-center mt-2"
                 >
                   <span>Withdraw Capital</span>
                 </Button>
@@ -257,7 +257,7 @@ const StakeHomePage = () => {
                 </div>
                 <div className="sm:flex justify-between bg-transparent md:mt-1">
                   <div>
-                    <Button color="primary" className="border border-secondary-subtle p-1 rounded-pill ">
+                    <Button color="primary" className="border border-secondary-subtle p-2 rounded-pill ">
                       Contact Support
                     </Button>
                   </div>
