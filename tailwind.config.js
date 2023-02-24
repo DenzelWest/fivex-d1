@@ -13,7 +13,12 @@ module.exports = {
       "light-blue": "#26277a",
       "text-bright": "#eff5c4",
       "primary-light": "#ffffff",
-      "primary-grey": "#E8E8E8"
+      "primary-grey": "#E8E8E8",
+      "secondary-green" : "#CFF7D8",
+      "primary-green" : "#04B404",
+      "primary-red" : "#DF0000",
+      "secondary-red" : "#F8E0E0",
+      
     }
   },
   plugins: [],

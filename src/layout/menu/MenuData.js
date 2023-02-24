@@ -15,12 +15,15 @@ const menu = [
     link: "/stake", 
   },
   {
+    icon: "cc-alt-fill",
+    text: "Wallet Dashboard",
+    link: "/wallet", 
+  },
+  {
     icon: "exchange-v",
     text: "Exchange Dashboard",
     link: "/exchange", 
   },
-
-
   {
     icon: "growth",
     text: "Analytics Dashboard",

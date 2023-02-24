@@ -9,6 +9,7 @@ import Crypto from "../pages/Crypto";
 import Analytics from "../pages/Analytics";
 import Invest from "../pages/Invest";
 import Stake from "../pages/Stake";
+import Wallet from "../pages/Wallet";
 import Exchange from "../pages/Exchange"
 
 import Component from "../pages/components/Index";
@@ -119,6 +120,7 @@ const Pages = () => {
         <Route exact path={`${process.env.PUBLIC_URL}/invest`} component={Invest}></Route>
         <Route exact path={`${process.env.PUBLIC_URL}/_blank`} component={Blank}></Route>
         <Route exact path={`${process.env.PUBLIC_URL}/stake`} component={Stake}></Route>
+        <Route exact path={`${process.env.PUBLIC_URL}/wallet`} component={Wallet}></Route>
         <Route exact path={`${process.env.PUBLIC_URL}/exchange`} component={Exchange}></Route>
 
         {/*Pre-built Pages*/}

@@ -151,7 +151,7 @@ const ExchangeHomePage = () => {
                                                                 setFromTokenValue(coin)
                                                                 setFromToken(false)
                                                             }}
-                                                            className="  flex items-center justify-between px-2 border border-black rounded-lg m-1  hover:scale-105 hover:scale-105 transition-all">
+                                                            className="  flex items-center justify-between px-2 border border-black rounded-lg m-1 hover:scale-105 transition-all">
                                                             <img src={coin.icon} alt="" className="h-5 bg-white rounded-full" />
                                                             <p className="my-2 ml-1">{coin.symbol}</p>
                                                         </button>
