@@ -25,6 +25,11 @@ const menu = [
     link: "/exchange", 
   },
   {
+    icon: "history",
+    text: "History Dashboard",
+    link: "/history", 
+  },
+  {
     icon: "growth",
     text: "Analytics Dashboard",
     link: "/analytics",
