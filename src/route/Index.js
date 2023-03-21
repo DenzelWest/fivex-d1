@@ -12,6 +12,7 @@ import Stake from "../pages/Stake";
 import Wallet from "../pages/Wallet";
 import Exchange from "../pages/Exchange";
 import History from "../pages/History";
+import Fiat from "../pages/Fiat";
 
 import Component from "../pages/components/Index";
 import Accordian from "../pages/components/Accordions";
@@ -124,6 +125,7 @@ const Pages = () => {
         <Route exact path={`${process.env.PUBLIC_URL}/wallet`} component={Wallet}></Route>
         <Route exact path={`${process.env.PUBLIC_URL}/exchange`} component={Exchange}></Route>
         <Route exact path={`${process.env.PUBLIC_URL}/history`} component={History}></Route>
+        <Route exact path={`${process.env.PUBLIC_URL}/fiat`} component={Fiat}></Route>
 
         {/*Pre-built Pages*/}
         <Route exact path={`${process.env.PUBLIC_URL}/project-card`} component={ProjectCardPage}></Route>
