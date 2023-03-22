@@ -28,6 +28,7 @@ const Sidebar = ({ fixed, theme, className, sidebarToggle, mobileView, ...props 
 
   return (
     <div className={classes}>
+      <div className="mt-[3px]">
       <div className="nk-sidebar-element nk-sidebar-head">
         <div className="nk-menu-trigger">
           <Toggle className="nk-nav-toggle nk-quick-nav-icon d-xl-none me-n2" icon="arrow-left" click={sidebarToggle} />
@@ -47,6 +48,7 @@ const Sidebar = ({ fixed, theme, className, sidebarToggle, mobileView, ...props 
         <SimpleBar className="nk-sidebar-menu">
           <Menu sidebarToggle={sidebarToggle} mobileView={mobileView}/>
         </SimpleBar>
+      </div>
       </div>
     </div>
   );

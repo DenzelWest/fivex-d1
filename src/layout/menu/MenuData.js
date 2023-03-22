@@ -1,48 +1,34 @@
 const menu = [
   {
     icon: "dashlite",
-    text: "Default Dashboard",
+    text: "Dashboard",
     link: "/",
   },
   {
-    icon: "bitcoin-cash",
-    text: "Crypto Dashboard",
-    link: "/crypto", 
-  },
-  {
-    icon: "sign-mxn-alt",
-    text: "Stake Dashboard",
-    link: "/stake", 
-  },
-  {
     icon: "cc-alt-fill",
-    text: "Wallet Dashboard",
+    text: "Wallet",
     link: "/wallet", 
   },
   {
+    icon: "sign-mxn-alt",
+    text: "Stake",
+    link: "/stake", 
+  },
+  {
     icon: "exchange-v",
-    text: "Exchange Dashboard",
+    text: "Swap",
     link: "/exchange", 
   },
   {
-    icon: "history",
-    text: "History Dashboard",
-    link: "/history", 
-  },
-  {
     icon: "server",
-    text: "Fiat Dashboard",
+    text: "Fiat",
     link: "/fiat", 
   },
   {
-    icon: "growth",
-    text: "Analytics Dashboard",
-    link: "/analytics",
+    icon: "history",
+    text: "History",
+    link: "/history", 
   },
-  {
-    icon: "coins",
-    text: "Invest Dashboard",
-    link: "/invest",
-  },
+
 ];
 export default menu;

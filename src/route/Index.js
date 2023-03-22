@@ -7,7 +7,6 @@ import { RedirectAs404 } from "../utils/Utils";
 import Homepage from "../pages/Homepage";
 import Crypto from "../pages/Crypto";
 import Analytics from "../pages/Analytics";
-import Invest from "../pages/Invest";
 import Stake from "../pages/Stake";
 import Wallet from "../pages/Wallet";
 import Exchange from "../pages/Exchange";
@@ -119,7 +118,6 @@ const Pages = () => {
         {/*Dashboards*/}
         <Route exact path={`${process.env.PUBLIC_URL}/crypto`} component={Crypto}></Route>
         <Route exact path={`${process.env.PUBLIC_URL}/analytics`} component={Analytics}></Route>
-        <Route exact path={`${process.env.PUBLIC_URL}/invest`} component={Invest}></Route>
         <Route exact path={`${process.env.PUBLIC_URL}/_blank`} component={Blank}></Route>
         <Route exact path={`${process.env.PUBLIC_URL}/stake`} component={Stake}></Route>
         <Route exact path={`${process.env.PUBLIC_URL}/wallet`} component={Wallet}></Route>

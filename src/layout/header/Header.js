@@ -26,7 +26,7 @@ const Header = ({ fixed, theme, className, setVisibility, ...props }) => {
               click={props.sidebarToggle}
             />
           </div>
-          <div className="nk-header-brand d-xl-none">
+          <div className="nk-header-brand d-xl-none mt-2">
             <Logo />
           </div>
           <div className="nk-header-news d-none d-xl-block">{/*  <News /> */}</div>
